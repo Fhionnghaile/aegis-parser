@@ -1,0 +1,6 @@
+test
+bench
+fuzz
+*.o
+*.dSYM/
+crash-*
