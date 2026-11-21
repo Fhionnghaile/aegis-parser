@@ -25,8 +25,8 @@ Aegis gateway shreds on its hot path. Two words that rarely meet: **fast *and* m
 
 ## Build & test
 ```bash
-cc -std=c11 -Wall -Wextra -fsanitize=address -Iinclude src/aegis_parse.c tests/test_parse.c -o test && ./test
-cc -O2 -Iinclude src/aegis_parse.c bench/bench.c -o bench && ./bench
+cc -std=c11 -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=undefined -Iinclude src/aegis_parse.c tests/test_parse.c -o test_parse && ./test_parse
+cc -O2 -Iinclude src/aegis_parse.c bench/bench.c -o bench_parse && ./bench_parse   # 'bench' is the source folder, so the binary needs another name
 # fuzz (clang): clang -O1 -fsanitize=fuzzer,address -Iinclude src/aegis_parse.c fuzz/fuzz_parse.c -o fuzz && ./fuzz -max_total_time=60
 ```
 
