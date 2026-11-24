@@ -2,8 +2,8 @@
 
 <!-- at-a-glance -->
 > **A high-speed log parser in C — the hot path that normalises raw lines before anything else sees them.**  
-> **Result:** C with a test harness, built warnings-as-errors.  
-> **Reproduce:** `make test`  
+> **Result:** 129 test checks pass under AddressSanitizer + UBSan; built with `-Wall -Wextra`.  
+> **Reproduce:** the one-line `cc … && ./test_parse` command under **Build & test** below  
 > ![CI](https://github.com/fhionnghaile/aegis-parser/actions/workflows/ci.yml/badge.svg)
 >
 > **What this is worth:** Parsing is the per-event cost that multiplies across billions of lines — doing it in C is the difference between keeping up and falling behind.
