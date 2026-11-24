@@ -4,7 +4,7 @@
 > **A high-speed log parser in C — the hot path that normalises raw lines before anything else sees them.**  
 > **Result:** 129 test checks pass under AddressSanitizer + UBSan; built with `-Wall -Wextra`.  
 > **Reproduce:** the one-line `cc … && ./test_parse` command under **Build & test** below  
-> ![CI](https://github.com/fhionnghaile/aegis-parser/actions/workflows/ci.yml/badge.svg)
+> ![CI](https://github.com/fhionnghaile/aegis-parser/actions/workflows/ci.yml/badge.svg) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Fhionnghaile/aegis-parser/badge)](https://scorecard.dev/viewer/?uri=github.com/Fhionnghaile/aegis-parser)
 >
 > **What this is worth:** Parsing is the per-event cost that multiplies across billions of lines — doing it in C is the difference between keeping up and falling behind.
 
